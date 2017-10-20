@@ -1,0 +1,26 @@
+{
+  "name": "Shorui",
+  "short_name": "Shorui",
+  "lang": "en-GB",
+  "start_url": "https://shorui-vue.firebaseapp.com/#/",
+  "display": "standalone",
+  "theme_color": "#209cee",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/shorui192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/shorui256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/shorui512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
