@@ -185,6 +185,9 @@
             <div class="level-item">
               <span v-if="this.getUpdated !== ''">Last updated: {{getLastUpdated()}}</span>
             </div>
+            <div class="level-item">
+              <a class="button is-info is-small" target="_blank" href="https://github.com/rasserudenisu/shorui"> <span class="icon"> <i class="fa fa-github"></i> </span> </a>
+            </div>
           </div>
         </nav>
       </footer>
