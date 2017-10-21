@@ -8,6 +8,8 @@ Vue.use(VueLocalStorage, {
   name: 'localStorage'
 })
 
+Vue.use(require('vue-shortkey'))
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

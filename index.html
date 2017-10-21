@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Shorui</title>
+    <meta name="description" content="Simple and flexible Markdown editing.">
+    <meta name="author" content="Dennis Russell">
+    <meta name="keywords" content="Markdown,Editor,Vue">
     <link rel="manifest" href="/static/manifest.json">
     <meta name="theme-color" content="#209cee"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,8 +16,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://shorui-vue.firebaseapp.com/#/">
+    <meta name="twitter:title" content="Shorui">
+    <meta name="twitter:description" content="Simple and flexible Markdown editing.">
+    <meta name="twitter:image" content="https://shorui-vue.firebaseapp.com/static/images/shorui512.png">
+
+    <meta property="og:url" content="https://shorui-vue.firebaseapp.com/#/" />
+    <meta property="og:title" content="Shorui" />
+    <meta property="og:description" content="Simple and flexible Markdown editing." />
+    <meta property="og:image" content="https://shorui-vue.firebaseapp.com/static/images/shorui512.png" />
   </head>
   <body>
+    <script>
+    if (navigator.serviceWorker.controller) {
+      console.log('[PWA Builder] active service worker found, no need to register')
+    } else {
+      navigator.serviceWorker.register('pwabuilder-sw.js', {
+        scope: './'
+      }).then(function(reg) {
+        console.log('Service worker has been registered for scope:'+ reg.scope);
+      });
+    }
+    </script>
     <noscript>Shorui requires Javascript to function.</noscript>
     <div id="app"></div>
   </body>

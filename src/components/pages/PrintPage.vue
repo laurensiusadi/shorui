@@ -17,6 +17,8 @@ import insert from 'markdown-it-ins'
 import deflist from 'markdown-it-deflist'
 import tasks from 'markdown-it-task-lists'
 import toc from 'markdown-it-toc-and-anchor'
+// let kt = require('katex')
+// var math = require('markdown-it-texmath').use(kt)
 var markdown = new MarkdownIt({
   html: true,
   linkify: true,
@@ -28,10 +30,11 @@ var markdown = new MarkdownIt({
 .use(footnote)
 .use(abbreviation)
 .use(insert)
-.use(tasks)
+.use(tasks, {enabled: true, label: true})
 .use(toc, {
   anchorLink: false
 })
+// .use(math)
 export default {
   name: 'print-page',
   data: () => {

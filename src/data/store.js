@@ -57,16 +57,20 @@ export default new Vuex.Store({
 
       switch (type) {
         case 'capitalize':
-          sub = _.capitalize(sub)
-          break
-        case 'decapitalize':
-          sub = _.decapitalize(sub)
+          sub = _.capitalize(sub, false)
           break
         case 'clean':
           sub = _.clean(sub)
           break
         case 'strip':
           sub = _.stripTags(sub)
+          break
+        case 'titleize':
+          sub = _.titleize(sub)
+          break
+        case 'join-lines':
+          sub = _.lines(sub)
+          sub = sub.join(' ')
           break
         default:
           break
@@ -98,6 +102,11 @@ export default new Vuex.Store({
           break
         case 'tasklist':
           value = '- [ ] unchecked item 1\n- [ ] unchecked item 2\n- [ ] unchecked item 3\n- [x] checked item 4\n'
+          break
+        case 'texmath':
+          /*eslint-disable */
+          value = 'Euler\'s identity $e^{i\pi}+1=0$ is a beautiful formula.'
+          /*eslint-enable */
           break
         default:
           break

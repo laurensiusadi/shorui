@@ -55,6 +55,9 @@
                     <a class="dropdown-item" v-on:click="insertExtra('table')">
                       Table
                     </a>
+                    <!-- <a class="dropdown-item" v-on:click="insertExtra('texmath')">
+                      TexMath
+                    </a> -->
                     <hr class="dropdown-divider">
                     <a class="dropdown-item" v-on:click="insertExtra('list')">
                       List
@@ -83,6 +86,9 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu-functions" role="menu">
                   <div class="dropdown-content">
+                    <a class="dropdown-item" v-on:click="processExtra('join-lines')">
+                      Join Lines
+                    </a>
                     <a class="dropdown-item" v-on:click="processExtra('strip')">
                       Strip Tags
                     </a>
@@ -92,8 +98,8 @@
                     <a class="dropdown-item" v-on:click="processExtra('capitalize')">
                       Capitalize
                     </a>
-                    <a class="dropdown-item" v-on:click="processExtra('decapitalize')">
-                      Decapitalize
+                    <a class="dropdown-item" v-on:click="processExtra('titleize')">
+                      Titleize
                     </a>
                   </div>
                 </div>
@@ -120,12 +126,12 @@
           </div>
         </div>
       </nav>
-      <div class="columns">
-        <transition name="side-fade">
+      <div class="columns"
+        v-shortkey.once="{docs:['ctrl', '1'], editor:['ctrl', '2'], preview:['ctrl', '3']}" @shortkey="toggleView"
+      >
         <div class="column is-2" v-if="showSidebar">
           <Sidebar/>
         </div>
-      </transition>
         <div class="column flex-container" v-if="showEditor">
           <article class="message" v-if="showFind">
             <div class="message-body">
@@ -236,6 +242,19 @@ export default {
     }
   },
   methods: {
+    toggleView (event) {
+      switch (event.srcKey) {
+        case 'docs':
+          this.showSidebar = !this.showSidebar
+          break
+        case 'editor':
+          this.showEditor = !this.showEditor
+          break
+        case 'preview':
+          this.showPreview = !this.showPreview
+          break
+      }
+    },
     getLastUpdated () {
       return moment(this.getUpdated).fromNow()
       // return moment(this.getUpdated).format('dddd, MMMM Do YYYY, h:mm:ss a')

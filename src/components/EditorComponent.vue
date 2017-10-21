@@ -34,6 +34,7 @@
           @select="updateCaret"
           @input="updateDocument"
           aria-label="editor"
+          v-shortkey.once="{join:['ctrl', 'j'], save:['ctrl', 's'], print:['ctrl', 'p']}" @shortkey="shortcuts"
         />
       </div>
     </div>
@@ -88,7 +89,20 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setPreviewRequested', 'setBody', 'setCaret', 'setUpdated', 'setSelectedDocument']),
+    ...mapMutations(['setPreviewRequested', 'setBody', 'setCaret', 'setUpdated', 'setSelectedDocument', 'alter']),
+    shortcuts (event) {
+      switch (event.srcKey) {
+        case 'join':
+          this.alter('join-lines')
+          break
+        case 'save':
+          this.updateDocument()
+          break
+        case 'print':
+          this.$router.push('/print')
+          break
+      }
+    },
     loadProjectTitles: async function () {
       var database = await db.get()
       database.documents
