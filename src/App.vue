@@ -6,12 +6,8 @@
 
 <script>
 import * as db from './data/db.js'
-import MainWindow from './components/MainWindow'
 export default {
   name: 'app',
-  components: {
-    MainWindow
-  },
   mounted: async function () {
     db.demoDocuments()
   }

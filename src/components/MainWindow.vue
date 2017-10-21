@@ -2,7 +2,7 @@
 
   <section class="section">
     <div class="container">
-      <nav class="level">
+      <nav class="level" role="navigation">
         <div class="level-left">
           <div class="level-item">
             <div class="field has-addons">
@@ -128,6 +128,7 @@
       </nav>
       <div class="columns"
         v-shortkey.once="{docs:['ctrl', '1'], editor:['ctrl', '2'], preview:['ctrl', '3']}" @shortkey="toggleView"
+        role="main"
       >
         <div class="column is-2" v-if="showSidebar">
           <Sidebar/>
@@ -168,7 +169,7 @@
           <Preview/>
         </div>
       </div>
-      <footer class="footer sticky">
+      <footer class="footer sticky is-hidden-mobile">
         <nav class="level is-info">
           <div class="level-left">
             <div class="level-item">
@@ -349,11 +350,12 @@ body {
     align-items: stretch;
     }
 .sticky {
+  font-size: .75rem;
   width:100%;
-  height:40px;
+  height:30px;
   background:hsl(204, 86%, 53%);
   color:white;
-  padding: 8px 20px;
+  padding: 2px 20px;
   position:fixed;
   bottom:0;
   left:0;

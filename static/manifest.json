@@ -1,108 +1,23 @@
 {
+    "author": "Dennis Russell",
+    "background_color": "#ffffff",
+    "description": "Simple and flexible Markdown editing.",
+    "display": "standalone",
     "name": "Shorui",
+    "orientation": "any",
     "short_name": "Shorui",
     "start_url": "/",
-    "author": "Dennis Russell",
-    "display": "standalone",
     "theme_color": "#209cee",
-    "background_color": "#ffffff",
     "icons": [
         {
-            "src": "/static/images/shorui192.png",
+            "src": "/static/images/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/images/shorui256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/shorui512.png",
+            "src": "/static/images/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
-        },
-        {
-            "src": "/static/images/77504484-ca53-2529-de60-cc4556a290f6.webPlatform.png",
-            "sizes": "48x48",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/48698797-587e-660e-cf9d-566ed6f96bf3.webPlatform.png",
-            "sizes": "1240x600",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/909da675-cc39-df0d-b4cf-16be5a9c06ea.webPlatform.png",
-            "sizes": "300x300",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/26fc1ab3-9d0e-b3b2-6d46-a3a828fdca16.webPlatform.png",
-            "sizes": "88x88",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/59f0da3e-c020-57b8-dbaa-4d3941dc3fc1.webPlatform.png",
-            "sizes": "24x24",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/2337b9a8-a012-d1e3-6465-59473dd98ea0.webPlatform.png",
-            "sizes": "50x50",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/0d3b0140-c6e6-2811-4d33-215d8d07d875.webPlatform.png",
-            "sizes": "620x300",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/52a6917e-d20d-6378-19e6-8f2305259a0b.webPlatform.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/1257781c-14ed-8470-a2b3-bf8a63301405.webPlatform.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/fb303323-fabb-8b0c-865b-971b4e6c0ae9.webPlatform.png",
-            "sizes": "72x72",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/ffb82df0-6bc7-3522-bf99-e324d2a3a001.webPlatform.png",
-            "sizes": "36x36",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/eb022183-c5d0-23a2-66fb-6e85cbf0c312.webPlatform.png",
-            "sizes": "1024x1024",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/55f782db-6b6a-e90d-600b-10f824ec66bf.webPlatform.png",
-            "sizes": "180x180",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/e7f16827-70c1-9f05-e6fc-abe3a3c2a089.webPlatform.png",
-            "sizes": "152x152",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/38c56754-55f4-b9f9-c264-fe2a9ca53264.webPlatform.png",
-            "sizes": "120x120",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/images/4e03f890-39cf-403b-0e9d-2bad0180302a.webPlatform.png",
-            "sizes": "76x76",
-            "type": "image/png"
         }
-    ],
-    "orientation": "any",
-    "description": "Simple and flexible Markdown editing."
+    ]
 }
