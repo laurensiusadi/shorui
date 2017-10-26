@@ -1,6 +1,6 @@
 import 'babel-polyfill'
 import * as RxDB from 'RxDB'
-RxDB.plugin(require('pouchdb-adapter-websql'))
+RxDB.plugin(require('pouchdb-adapter-idb'))
 RxDB.QueryChangeDetector.enable()
 
 const collections = [
@@ -15,7 +15,7 @@ let dbPromise = null
 const _create = async function () {
   const db = await RxDB.create({
     name: 'shorui',
-    adapter: 'websql',
+    adapter: 'idb',
     password: 'JGkashjasdhsdasjdiuOHJGDFSIYDS2651',
     multiInstance: false,
     ingoreDuplicate: true

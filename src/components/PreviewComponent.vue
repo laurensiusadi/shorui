@@ -22,17 +22,17 @@ var markdown = new MarkdownIt({
   linkify: true,
   typographer: true
 })
-.use(subscript)
-.use(superscript)
-.use(deflist)
-.use(footnote)
-.use(abbreviation)
-.use(insert)
-.use(tasks, {enabled: true, label: true})
-.use(toc, {
-  anchorLink: false
-})
-// .use(math)
+  .use(subscript)
+  .use(superscript)
+  .use(deflist)
+  .use(footnote)
+  .use(abbreviation)
+  .use(insert)
+  .use(tasks, {enabled: true, label: true})
+  .use(toc, {
+    anchorLink: false
+  })
+  // .use(math)
 export default {
   name: 'editor-component',
   data: () => {
@@ -59,7 +59,9 @@ export default {
   },
   methods: {
     renderHTML () {
-      this.html = markdown.render(this.getBody)
+      if (this.getBody) {
+        this.html = markdown.render(this.getBody)
+      }
     }
   }
 }

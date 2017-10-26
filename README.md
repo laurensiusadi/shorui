@@ -6,7 +6,7 @@ Built with Vue, RxDB, MarkdownIt, and Bulma, among others.
 
 ## Features
 
-* Edit multiple documents in multiple projects.
+* Process multiple documents.
 * Functions to insert various Markdown elements.
 * Insta-rendering, and separate print view.
 * Service worker for offline support.

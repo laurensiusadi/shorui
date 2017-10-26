@@ -24,16 +24,16 @@ var markdown = new MarkdownIt({
   linkify: true,
   typographer: true
 })
-.use(subscript)
-.use(superscript)
-.use(deflist)
-.use(footnote)
-.use(abbreviation)
-.use(insert)
-.use(tasks, {enabled: true, label: true})
-.use(toc, {
-  anchorLink: false
-})
+  .use(subscript)
+  .use(superscript)
+  .use(deflist)
+  .use(footnote)
+  .use(abbreviation)
+  .use(insert)
+  .use(tasks, {enabled: true, label: true})
+  .use(toc, {
+    anchorLink: false
+  })
 // .use(math)
 export default {
   name: 'print-page',

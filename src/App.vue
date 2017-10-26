@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import * as db from './data/db.js'
+import * as db from './database/db.js'
 export default {
   name: 'app',
   mounted: async function () {
@@ -20,5 +20,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+body {
+  margin: 0px;
+}
+html {
+    position: relative;
+    min-height: 100%;
 }
 </style>

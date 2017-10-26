@@ -1,7 +1,7 @@
 {
   "name": "Shorui",
-  "version": "1.0.1",
-  "description": "Simple markdown composing.",
+  "version": "1.1.0",
+  "description": "Simple Markdown Editing.",
   "author": "Dennis Russell",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bulma": "^0.6.0",
+    "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "markdown": "^0.5.0",
     "markdown-it": "^8.4.0",
@@ -26,7 +28,7 @@
     "markdown-it-task-lists": "^2.0.1",
     "markdown-it-toc-and-anchor": "^4.1.2",
     "moment": "^2.19.1",
-    "pouchdb-adapter-websql": "^6.3.4",
+    "pouchdb-adapter-idb": "^6.3.4",
     "rxdb": "^6.0.1",
     "rxjs": "^5.5.0",
     "textics": "^0.1.1",

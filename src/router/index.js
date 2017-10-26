@@ -4,20 +4,24 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 function load (component) {
-  return () => import(`@/components/${component}.vue`)
+  return () => import(`@/${component}.vue`)
 }
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'MainWindow',
-      component: load('MainWindow')
+      name: 'main-window',
+      component: load('components/MainWindow')
     },
     {
       path: '/print',
-      name: 'PrintWindow',
+      name: 'print-page',
       component: load('pages/PrintPage')
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

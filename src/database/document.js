@@ -8,10 +8,6 @@ const document = {
       'type': 'string',
       'encrypted': true
     },
-    'description': {
-      'type': 'string',
-      'encrypted': true
-    },
     'created': {
       'type': 'string',
       'primary': true
@@ -23,9 +19,17 @@ const document = {
       'type': 'string',
       'encrypted': true
     },
-    'project': {
-      'type': 'string',
-      'encrypted': true
+    'tags': {
+      'type': 'array',
+      'item': {
+        'type': 'string'
+      }
+    },
+    'order': {
+      'type': 'number'
+    },
+    'fixed': {
+      'type': 'boolean'
     }
   }
 }
