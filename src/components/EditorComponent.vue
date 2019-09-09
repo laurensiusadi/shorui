@@ -5,7 +5,7 @@
         <input class="input" type="text" placeholder="Title" @change="updateDocument()" v-model="title" aria-label="document-title"/>
       </div>
       <div class="control">
-        <a class="button" :class="{'is-info': isPinned}" v-on:click="pinDoc()"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span></a>
+        <a class="button" :class="{'is-info': isPinned}" v-on:click="pinDoc()"><i class="fa fa-thumb-tack" aria-hidden="true"></i></a>
       </div>
     </div>
     <div class="editor">
@@ -88,7 +88,7 @@ export default {
       function () {
         var positionStart = document.getElementById('editor').selectionStart || 0
         var positionEnd = document.getElementById('editor').selectionEnd || 0
-        this.setCaret({start: positionStart, end: positionEnd})
+        this.setCaret({ start: positionStart, end: positionEnd })
       }, 100, {
         maxWait: 500
       }
@@ -97,7 +97,7 @@ export default {
       function () {
         var positionStart = document.getElementById('editor').selectionStart || 0
         var positionEnd = document.getElementById('editor').selectionEnd || 0
-        this.setCaret({start: positionStart, end: positionEnd})
+        this.setCaret({ start: positionStart, end: positionEnd })
         if (this.doc) {
           this.$store.commit('saveDocument')
         }

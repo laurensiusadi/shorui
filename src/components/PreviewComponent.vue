@@ -28,7 +28,7 @@ var markdown = new MarkdownIt({
   .use(footnote)
   .use(abbreviation)
   .use(insert)
-  .use(tasks, {enabled: true, label: true})
+  .use(tasks, { enabled: true, label: true })
   .use(toc, {
     anchorLink: false
   })

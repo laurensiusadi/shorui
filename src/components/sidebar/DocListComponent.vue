@@ -16,7 +16,6 @@
   </div>
 </template>
 
-
 <script>
 import { mapMutations } from 'vuex'
 import moment from 'moment'

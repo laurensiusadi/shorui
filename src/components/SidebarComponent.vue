@@ -1,7 +1,8 @@
 <template>
   <aside class="menu">
     <div
-      v-for="document in documentList"
+      v-for="(document, index) in documentList"
+      :key="index"
     >
       <DocListComponent
         class="collapse-item"

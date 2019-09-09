@@ -3,21 +3,19 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-function load (component) {
-  return () => import(`@/${component}.vue`)
-}
-
 export default new Router({
+  mode: 'history',
+  base: '/',
   routes: [
     {
       path: '/',
       name: 'main-window',
-      component: load('components/MainWindow')
+      component: () => import('@/components/MainWindow')
     },
     {
       path: '/print',
       name: 'print-page',
-      component: load('pages/PrintPage')
+      component: () => import('@/pages/PrintPage')
     },
     {
       path: '*',

@@ -63,7 +63,6 @@
 </div>
 </template>
 
-
 <script>
 export default {
   name: 'settings-page',

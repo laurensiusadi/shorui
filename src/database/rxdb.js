@@ -1,5 +1,5 @@
 import 'babel-polyfill'
-import * as RxDB from 'RxDB'
+import * as RxDB from 'rxdb'
 RxDB.plugin(require('pouchdb-adapter-idb'))
 RxDB.QueryChangeDetector.enable()
 

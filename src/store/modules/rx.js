@@ -14,7 +14,7 @@ const state = {
   doc: {},
   selectedDocument: '',
   previewRequested: false,
-  caret: {start: 0, end: 0},
+  caret: { start: 0, end: 0 },
   findIndex: 0,
   documentList: []
 }
@@ -27,7 +27,7 @@ const mutations = {
     state.doc.remove()
     state.doc = {}
     state.selectedDocument = ''
-    state.caret = {start: 0, end: 0}
+    state.caret = { start: 0, end: 0 }
   },
   pinDocument (state) {
     state.doc.fixed = !state.doc.fixed
